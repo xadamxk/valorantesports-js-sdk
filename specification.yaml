@@ -1,0 +1,763 @@
+openapi: 3.0.0
+info:
+  title: ValorantEsports OpenApi Specification
+  version: 1.0.0
+  description: Unofficial documentation to the ValorantEsports Api
+paths:
+  /getEventDetails:
+    get:
+      operationId: getEventDetails
+      summary: Get getEventDetails record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: id
+          description: id
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getEventDetails"
+  /getEventList:
+    get:
+      operationId: getEventList
+      summary: Get getEventList record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: leagueId
+          description: leagueId
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getEventList"
+  /getLeagues:
+    get:
+      operationId: getLeagues
+      summary: Get getLeagues record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getLeagues"
+  /getLeaguesForStandings:
+    get:
+      operationId: getLeaguesForStandings
+      summary: Get getLeaguesForStandings record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getLeaguesForStandings"
+  /getLiveDetails:
+    get:
+      operationId: getLiveDetails
+      summary: Get getLiveDetails record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getLiveDetails"
+  /getSchedule:
+    get:
+      operationId: getSchedule
+      summary: Get getSchedule record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: eventState
+          description: eventState
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getSchedule"
+  /getStandings:
+    get:
+      operationId: getStandings
+      summary: Get getStandings record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: tournamentId
+          description: tournamentId
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getStandings"
+  /getVods:
+    get:
+      operationId: getVods
+      summary: Get getVods record
+      parameters:
+        - name: hl
+          description: hl
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: sport
+          description: sport
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: tournamentId
+          description: tournamentId
+          in: query
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/getVods"
+components:
+  schemas:
+    getEventDetails:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            event:
+              type: object
+              properties:
+                id:
+                  type: string
+                type:
+                  type: string
+                tournament:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                league:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    slug:
+                      type: string
+                    image:
+                      type: string
+                    name:
+                      type: string
+                match:
+                  type: object
+                  properties:
+                    strategy:
+                      type: object
+                      properties:
+                        count:
+                          type: number
+                    teams:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          name:
+                            type: string
+                          code:
+                            type: string
+                          image:
+                            type: string
+                          result:
+                            type: object
+                            properties:
+                              gameWins:
+                                type: number
+                    games:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          number:
+                            type: number
+                          id:
+                            type: string
+                          state:
+                            type: string
+                          teams:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                side:
+                                  type: string
+                          vods:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                id:
+                                  type: string
+                                parameter:
+                                  type: string
+                                locale:
+                                  type: string
+                                mediaLocale:
+                                  type: object
+                                  properties:
+                                    locale:
+                                      type: string
+                                    englishName:
+                                      type: string
+                                    translatedName:
+                                      type: string
+                                provider:
+                                  type: string
+                                offset:
+                                  type: number
+                                firstFrameTime:
+                                  type: integer
+                                startMillis:
+                                  type: integer
+                                endMillis:
+                                  type: integer
+                streams:
+                  type: array
+                  items:
+                    type: object
+    getEventList:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            inProgress:
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    type: object
+            unstarted:
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      startTime:
+                        type: string
+                      match:
+                        type: object
+                        properties:
+                          teams:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                code:
+                                  type: string
+                                image:
+                                  type: string
+                      league:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          slug:
+                            type: string
+                          image:
+                            type: string
+                          name:
+                            type: string
+    getLeagues:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            leagues:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  slug:
+                    type: string
+                  name:
+                    type: string
+                  region:
+                    type: string
+                  image:
+                    type: string
+                  priority:
+                    type: number
+                  displayPriority:
+                    type: object
+                    properties:
+                      position:
+                        type: number
+                      status:
+                        type: string
+    getLeaguesForStandings:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            leagues:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  slug:
+                    type: string
+                  name:
+                    type: string
+                  region:
+                    type: string
+                  image:
+                    type: string
+                  priority:
+                    type: number
+                  displayPriority:
+                    type: object
+                    properties:
+                      position:
+                        type: number
+                      status:
+                        type: string
+                  tournaments:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        split:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                        season:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            slug:
+                              type: string
+                            name:
+                              type: string
+                            startTime:
+                              type: string
+                            splits:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  id:
+                                    type: string
+                                  slug:
+                                    type: string
+                                  name:
+                                    type: string
+    getLiveDetails:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            schedule:
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    type: object
+    getSchedule:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            schedule:
+              type: object
+              properties:
+                pages:
+                  type: object
+                  properties:
+                    older:
+                      type: object
+                    newer:
+                      type: object
+                events:
+                  type: array
+                  items:
+                    type: object
+    getStandings:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            standings:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  slug:
+                    type: string
+                  scores:
+                    type: object
+                  split:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                  season:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      name:
+                        type: string
+                      slug:
+                        type: string
+                      status:
+                        type: string
+                      startTime:
+                        type: string
+                      endTime:
+                        type: string
+                      splits:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            name:
+                              type: string
+                            slug:
+                              type: string
+                            startTime:
+                              type: string
+                            endTime:
+                              type: string
+                  stages:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        slug:
+                          type: string
+                        sections:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              name:
+                                type: string
+                              type:
+                                type: string
+                              columns:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    cells:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          name:
+                                            type: string
+                                          slug:
+                                            type: string
+                                          matches:
+                                            type: array
+                                            items:
+                                              type: object
+                                              properties:
+                                                id:
+                                                  type: string
+                                                structuralId:
+                                                  type: string
+                                                state:
+                                                  type: string
+                                                teams:
+                                                  type: array
+                                                  items:
+                                                    type: object
+                                                    properties:
+                                                      id:
+                                                        type: string
+                                                      slug:
+                                                        type: string
+                                                      name:
+                                                        type: string
+                                                      code:
+                                                        type: string
+                                                      image:
+                                                        type: string
+                                                      result:
+                                                        type: object
+                                                        properties:
+                                                          outcome:
+                                                            type: string
+                                                          gameWins:
+                                                            type: number
+                                                      origin:
+                                                        type: object
+                                                        properties:
+                                                          structuralId:
+                                                            type: string
+                                                          type:
+                                                            type: string
+                                                          slot:
+                                                            type: number
+                              rankings:
+                                type: array
+                                items:
+                                  type: object
+    getVods:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            schedule:
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      startTime:
+                        type: string
+                      blockName:
+                        type: string
+                      league:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          slug:
+                            type: string
+                      tournament:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                      match:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          type:
+                            type: string
+                          flags:
+                            type: array
+                            items:
+                              type: string
+                          teams:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                code:
+                                  type: string
+                                image:
+                                  type: string
+                                result:
+                                  type: object
+                                  properties:
+                                    gameWins:
+                                      type: number
+                          strategy:
+                            type: object
+                            properties:
+                              type:
+                                type: string
+                              count:
+                                type: number
+                      games:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            state:
+                              type: string
+                            vods:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  parameter:
+                                    type: string
+tags: []
+servers:
+  - url: https://esports-api.service.valorantesports.com/persisted/val
