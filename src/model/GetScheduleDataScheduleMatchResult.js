@@ -15,29 +15,29 @@
 import {ApiClient} from '../ApiClient';
 
 /**
- * The GetStandingsDataResult model module.
- * @module model/GetStandingsDataResult
+ * The GetScheduleDataScheduleMatchResult model module.
+ * @module model/GetScheduleDataScheduleMatchResult
  * @version 1.0.0
  */
-export class GetStandingsDataResult {
+export class GetScheduleDataScheduleMatchResult {
   /**
-   * Constructs a new <code>GetStandingsDataResult</code>.
-   * @alias module:model/GetStandingsDataResult
+   * Constructs a new <code>GetScheduleDataScheduleMatchResult</code>.
+   * @alias module:model/GetScheduleDataScheduleMatchResult
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>GetStandingsDataResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetScheduleDataScheduleMatchResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetStandingsDataResult} obj Optional instance to populate.
-   * @return {module:model/GetStandingsDataResult} The populated <code>GetStandingsDataResult</code> instance.
+   * @param {module:model/GetScheduleDataScheduleMatchResult} obj Optional instance to populate.
+   * @return {module:model/GetScheduleDataScheduleMatchResult} The populated <code>GetScheduleDataScheduleMatchResult</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GetStandingsDataResult();
+      obj = obj || new GetScheduleDataScheduleMatchResult();
       if (data.hasOwnProperty('outcome'))
         obj.outcome = ApiClient.convertToType(data['outcome'], 'String');
       if (data.hasOwnProperty('gameWins'))
@@ -50,10 +50,10 @@ export class GetStandingsDataResult {
 /**
  * @member {String} outcome
  */
-GetStandingsDataResult.prototype.outcome = undefined;
+GetScheduleDataScheduleMatchResult.prototype.outcome = undefined;
 
 /**
  * @member {Number} gameWins
  */
-GetStandingsDataResult.prototype.gameWins = undefined;
+GetScheduleDataScheduleMatchResult.prototype.gameWins = undefined;
 

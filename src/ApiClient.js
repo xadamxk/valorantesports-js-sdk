@@ -41,6 +41,7 @@ export class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
+            'apiKeyAuth': {type: 'apiKey', 'in': 'header', name: 'x-api-key'}
         }
 
         /**

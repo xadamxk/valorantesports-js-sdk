@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**older** | **Object** |  | [optional] 
-**newer** | **Object** |  | [optional] 
+**older** | **String** |  | [optional] 
+**newer** | **String** |  | [optional] 

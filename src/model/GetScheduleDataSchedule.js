@@ -13,6 +13,7 @@
  *
  */
 import {ApiClient} from '../ApiClient';
+import {GetScheduleDataScheduleEvents} from './GetScheduleDataScheduleEvents';
 import {GetScheduleDataSchedulePages} from './GetScheduleDataSchedulePages';
 
 /**
@@ -42,7 +43,7 @@ export class GetScheduleDataSchedule {
       if (data.hasOwnProperty('pages'))
         obj.pages = GetScheduleDataSchedulePages.constructFromObject(data['pages']);
       if (data.hasOwnProperty('events'))
-        obj.events = ApiClient.convertToType(data['events'], [Object]);
+        obj.events = ApiClient.convertToType(data['events'], [GetScheduleDataScheduleEvents]);
     }
     return obj;
   }
@@ -54,7 +55,7 @@ export class GetScheduleDataSchedule {
 GetScheduleDataSchedule.prototype.pages = undefined;
 
 /**
- * @member {Array.<Object>} events
+ * @member {Array.<module:model/GetScheduleDataScheduleEvents>} events
  */
 GetScheduleDataSchedule.prototype.events = undefined;
 

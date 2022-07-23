@@ -29,26 +29,20 @@
   var instance;
 
   describe('(package)', function() {
-    describe('GetVodsDataScheduleMatchStrategy', function() {
+    describe('GetScheduleDataScheduleTournamentSplit', function() {
       beforeEach(function() {
-        instance = new ValorantEsportsOpenApiSpecification.GetVodsDataScheduleMatchStrategy();
+        instance = new ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleTournamentSplit();
       });
 
-      it('should create an instance of GetVodsDataScheduleMatchStrategy', function() {
-        // TODO: update the code to test GetVodsDataScheduleMatchStrategy
-        expect(instance).to.be.a(ValorantEsportsOpenApiSpecification.GetVodsDataScheduleMatchStrategy);
+      it('should create an instance of GetScheduleDataScheduleTournamentSplit', function() {
+        // TODO: update the code to test GetScheduleDataScheduleTournamentSplit
+        expect(instance).to.be.a(ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleTournamentSplit);
       });
 
-      it('should have the property type (base name: "type")', function() {
-        // TODO: update the code to test the property type
-        expect(instance).to.have.property('type');
-        // expect(instance.type).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property count (base name: "count")', function() {
-        // TODO: update the code to test the property count
-        expect(instance).to.have.property('count');
-        // expect(instance.count).to.be(expectedValueLiteral);
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
       });
 
     });

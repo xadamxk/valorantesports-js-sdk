@@ -10,9 +10,9 @@ paths:
       summary: Get getEventDetails record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -20,7 +20,7 @@ paths:
         - name: id
           description: id
           in: query
-          required: false
+          required: true
           style: form
           explode: true
           schema:
@@ -38,9 +38,9 @@ paths:
       summary: Get getEventList record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -74,9 +74,9 @@ paths:
       summary: Get getLeagues record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -102,9 +102,9 @@ paths:
       summary: Get getLeaguesForStandings record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -130,9 +130,9 @@ paths:
       summary: Get getLiveDetails record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -158,9 +158,9 @@ paths:
       summary: Get getSchedule record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -173,14 +173,14 @@ paths:
           explode: true
           schema:
             type: string
-        - name: eventState
-          description: eventState
+        - name: leagueId
+          description: leagueId
           in: query
           required: false
           style: form
           explode: true
           schema:
-            type: string
+            type: number
       responses:
         "200":
           description: ""
@@ -194,9 +194,9 @@ paths:
       summary: Get getStandings record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -230,9 +230,9 @@ paths:
       summary: Get getVods record
       parameters:
         - name: hl
+          required: true
           description: hl
           in: query
-          required: false
           style: form
           explode: true
           schema:
@@ -537,13 +537,87 @@ components:
                   type: object
                   properties:
                     older:
-                      type: object
+                      type: string
                     newer:
-                      type: object
+                      type: string
                 events:
                   type: array
                   items:
                     type: object
+                    properties:
+                      startTime:
+                        type: string
+                      state:
+                        type: string
+                      type:
+                        type: string
+                      blockName:
+                        type: string
+                      league:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          slug:
+                            type: string
+                          image:
+                            type: string
+                          region:
+                            type: string
+                      tournament:
+                        type: object
+                        properties:
+                          split:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                          season:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                      match:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                          flags:
+                            type: array
+                            items:
+                              type: string
+                          teams:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                code:
+                                  type: string
+                                image:
+                                  type: string
+                                result:
+                                  type: object
+                                  properties:
+                                    outcome:
+                                      type: string
+                                    gameWins:
+                                      type: number
+                                record:
+                                  type: object
+                                  properties:
+                                    wins:
+                                      type: number
+                                    losses:
+                                      type: number
+                          strategy:
+                            type: object
+                            properties:
+                              type:
+                                type: string
+                              count:
+                                type: number
     getStandings:
       type: object
       properties:
@@ -758,6 +832,44 @@ components:
                                 properties:
                                   parameter:
                                     type: string
+    Locale:
+      type: string
+      description: |
+        This is the locale or language code using [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1)
+        and [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+      enum:
+        [
+          en-US,
+          en-GB,
+          en-AU,
+          cs-CZ,
+          de-DE,
+          el-GR,
+          es-ES,
+          es-MX,
+          fr-FR,
+          hu-HU,
+          it-IT,
+          pl-PL,
+          pt-BR,
+          ro-RO,
+          ru-RU,
+          tr-TR,
+          ja-JP,
+          ko-KR,
+        ]
+    State:
+      type: string
+      enum: [completed, unstarted, inProgress]
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      description: |
+        The key is, `0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z`
+      in: header
+      name: x-api-key
 tags: []
+security:
+  - apiKeyAuth: []
 servers:
   - url: https://esports-api.service.valorantesports.com/persisted/val

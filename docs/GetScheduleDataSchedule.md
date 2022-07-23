@@ -4,4 +4,4 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pages** | [**GetScheduleDataSchedulePages**](GetScheduleDataSchedulePages.md) |  | [optional] 
-**events** | **[Object]** |  | [optional] 
+**events** | [**[GetScheduleDataScheduleEvents]**](GetScheduleDataScheduleEvents.md) |  | [optional] 

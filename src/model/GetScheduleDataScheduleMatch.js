@@ -14,40 +14,38 @@
  */
 import {ApiClient} from '../ApiClient';
 import {GetScheduleDataScheduleMatchStrategy} from './GetScheduleDataScheduleMatchStrategy';
-import {GetVodsDataScheduleMatchTeams} from './GetVodsDataScheduleMatchTeams';
+import {GetScheduleDataScheduleMatchTeams} from './GetScheduleDataScheduleMatchTeams';
 
 /**
- * The GetVodsDataScheduleMatch model module.
- * @module model/GetVodsDataScheduleMatch
+ * The GetScheduleDataScheduleMatch model module.
+ * @module model/GetScheduleDataScheduleMatch
  * @version 1.0.0
  */
-export class GetVodsDataScheduleMatch {
+export class GetScheduleDataScheduleMatch {
   /**
-   * Constructs a new <code>GetVodsDataScheduleMatch</code>.
-   * @alias module:model/GetVodsDataScheduleMatch
+   * Constructs a new <code>GetScheduleDataScheduleMatch</code>.
+   * @alias module:model/GetScheduleDataScheduleMatch
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>GetVodsDataScheduleMatch</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetScheduleDataScheduleMatch</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetVodsDataScheduleMatch} obj Optional instance to populate.
-   * @return {module:model/GetVodsDataScheduleMatch} The populated <code>GetVodsDataScheduleMatch</code> instance.
+   * @param {module:model/GetScheduleDataScheduleMatch} obj Optional instance to populate.
+   * @return {module:model/GetScheduleDataScheduleMatch} The populated <code>GetScheduleDataScheduleMatch</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GetVodsDataScheduleMatch();
+      obj = obj || new GetScheduleDataScheduleMatch();
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
-      if (data.hasOwnProperty('type'))
-        obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('flags'))
         obj.flags = ApiClient.convertToType(data['flags'], ['String']);
       if (data.hasOwnProperty('teams'))
-        obj.teams = ApiClient.convertToType(data['teams'], [GetVodsDataScheduleMatchTeams]);
+        obj.teams = ApiClient.convertToType(data['teams'], [GetScheduleDataScheduleMatchTeams]);
       if (data.hasOwnProperty('strategy'))
         obj.strategy = GetScheduleDataScheduleMatchStrategy.constructFromObject(data['strategy']);
     }
@@ -58,25 +56,20 @@ export class GetVodsDataScheduleMatch {
 /**
  * @member {String} id
  */
-GetVodsDataScheduleMatch.prototype.id = undefined;
-
-/**
- * @member {String} type
- */
-GetVodsDataScheduleMatch.prototype.type = undefined;
+GetScheduleDataScheduleMatch.prototype.id = undefined;
 
 /**
  * @member {Array.<String>} flags
  */
-GetVodsDataScheduleMatch.prototype.flags = undefined;
+GetScheduleDataScheduleMatch.prototype.flags = undefined;
 
 /**
- * @member {Array.<module:model/GetVodsDataScheduleMatchTeams>} teams
+ * @member {Array.<module:model/GetScheduleDataScheduleMatchTeams>} teams
  */
-GetVodsDataScheduleMatch.prototype.teams = undefined;
+GetScheduleDataScheduleMatch.prototype.teams = undefined;
 
 /**
  * @member {module:model/GetScheduleDataScheduleMatchStrategy} strategy
  */
-GetVodsDataScheduleMatch.prototype.strategy = undefined;
+GetScheduleDataScheduleMatch.prototype.strategy = undefined;
 

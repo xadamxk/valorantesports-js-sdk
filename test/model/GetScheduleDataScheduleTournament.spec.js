@@ -29,26 +29,26 @@
   var instance;
 
   describe('(package)', function() {
-    describe('GetStandingsDataResult', function() {
+    describe('GetScheduleDataScheduleTournament', function() {
       beforeEach(function() {
-        instance = new ValorantEsportsOpenApiSpecification.GetStandingsDataResult();
+        instance = new ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleTournament();
       });
 
-      it('should create an instance of GetStandingsDataResult', function() {
-        // TODO: update the code to test GetStandingsDataResult
-        expect(instance).to.be.a(ValorantEsportsOpenApiSpecification.GetStandingsDataResult);
+      it('should create an instance of GetScheduleDataScheduleTournament', function() {
+        // TODO: update the code to test GetScheduleDataScheduleTournament
+        expect(instance).to.be.a(ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleTournament);
       });
 
-      it('should have the property outcome (base name: "outcome")', function() {
-        // TODO: update the code to test the property outcome
-        expect(instance).to.have.property('outcome');
-        // expect(instance.outcome).to.be(expectedValueLiteral);
+      it('should have the property split (base name: "split")', function() {
+        // TODO: update the code to test the property split
+        expect(instance).to.have.property('split');
+        // expect(instance.split).to.be(expectedValueLiteral);
       });
 
-      it('should have the property gameWins (base name: "gameWins")', function() {
-        // TODO: update the code to test the property gameWins
-        expect(instance).to.have.property('gameWins');
-        // expect(instance.gameWins).to.be(expectedValueLiteral);
+      it('should have the property season (base name: "season")', function() {
+        // TODO: update the code to test the property season
+        expect(instance).to.have.property('season');
+        // expect(instance.season).to.be(expectedValueLiteral);
       });
 
     });

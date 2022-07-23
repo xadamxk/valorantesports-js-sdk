@@ -51,21 +51,28 @@ export class DefaultApi {
 
     /**
      * Get getEventDetails record
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
-     * @param {Number} opts.id id
+     * @param {String} hl hl
+     * @param {Number} id id
      * @param {module:api/DefaultApi~getEventDetailsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getEventDetails(opts, callback) {
-      opts = opts || {};
+    getEventDetails(hl, id, callback) {
+      
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getEventDetails");
+      }
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getEventDetails");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'id': opts['id']
+        'hl': hl,'id': id
       };
       let headerParams = {
         
@@ -74,7 +81,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetEventDetails;
@@ -95,22 +102,26 @@ export class DefaultApi {
 
     /**
      * Get getEventList record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
      * @param {Number} opts.leagueId leagueId
      * @param {module:api/DefaultApi~getEventListCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getEventList(opts, callback) {
+    getEventList(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getEventList");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport'],'leagueId': opts['leagueId']
+        'hl': hl,'sport': opts['sport'],'leagueId': opts['leagueId']
       };
       let headerParams = {
         
@@ -119,7 +130,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetEventList;
@@ -140,21 +151,25 @@ export class DefaultApi {
 
     /**
      * Get getLeagues record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
      * @param {module:api/DefaultApi~getLeaguesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getLeagues(opts, callback) {
+    getLeagues(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getLeagues");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport']
+        'hl': hl,'sport': opts['sport']
       };
       let headerParams = {
         
@@ -163,7 +178,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetLeagues;
@@ -184,21 +199,25 @@ export class DefaultApi {
 
     /**
      * Get getLeaguesForStandings record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
      * @param {module:api/DefaultApi~getLeaguesForStandingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getLeaguesForStandings(opts, callback) {
+    getLeaguesForStandings(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getLeaguesForStandings");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport']
+        'hl': hl,'sport': opts['sport']
       };
       let headerParams = {
         
@@ -207,7 +226,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetLeaguesForStandings;
@@ -228,21 +247,25 @@ export class DefaultApi {
 
     /**
      * Get getLiveDetails record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
      * @param {module:api/DefaultApi~getLiveDetailsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getLiveDetails(opts, callback) {
+    getLiveDetails(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getLiveDetails");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport']
+        'hl': hl,'sport': opts['sport']
       };
       let headerParams = {
         
@@ -251,7 +274,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetLiveDetails;
@@ -272,22 +295,26 @@ export class DefaultApi {
 
     /**
      * Get getSchedule record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
-     * @param {String} opts.eventState eventState
+     * @param {Number} opts.leagueId leagueId
      * @param {module:api/DefaultApi~getScheduleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getSchedule(opts, callback) {
+    getSchedule(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getSchedule");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport'],'eventState': opts['eventState']
+        'hl': hl,'sport': opts['sport'],'leagueId': opts['leagueId']
       };
       let headerParams = {
         
@@ -296,7 +323,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetSchedule;
@@ -317,22 +344,26 @@ export class DefaultApi {
 
     /**
      * Get getStandings record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
      * @param {Number} opts.tournamentId tournamentId
      * @param {module:api/DefaultApi~getStandingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getStandings(opts, callback) {
+    getStandings(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getStandings");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport'],'tournamentId': opts['tournamentId']
+        'hl': hl,'sport': opts['sport'],'tournamentId': opts['tournamentId']
       };
       let headerParams = {
         
@@ -341,7 +372,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetStandings;
@@ -362,22 +393,26 @@ export class DefaultApi {
 
     /**
      * Get getVods record
+     * @param {String} hl hl
      * @param {Object} opts Optional parameters
-     * @param {String} opts.hl hl
      * @param {String} opts.sport sport
      * @param {Number} opts.tournamentId tournamentId
      * @param {module:api/DefaultApi~getVodsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link <&vendorExtensions.x-jsdoc-type>}
      */
-    getVods(opts, callback) {
+    getVods(hl, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'hl' is set
+      if (hl === undefined || hl === null) {
+        throw new Error("Missing the required parameter 'hl' when calling getVods");
+      }
 
       let pathParams = {
         
       };
       let queryParams = {
-        'hl': opts['hl'],'sport': opts['sport'],'tournamentId': opts['tournamentId']
+        'hl': hl,'sport': opts['sport'],'tournamentId': opts['tournamentId']
       };
       let headerParams = {
         
@@ -386,7 +421,7 @@ export class DefaultApi {
         
       };
 
-      let authNames = [];
+      let authNames = ['apiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GetVods;

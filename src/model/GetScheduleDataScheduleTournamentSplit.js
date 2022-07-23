@@ -15,29 +15,29 @@
 import {ApiClient} from '../ApiClient';
 
 /**
- * The GetVodsDataScheduleTournament model module.
- * @module model/GetVodsDataScheduleTournament
+ * The GetScheduleDataScheduleTournamentSplit model module.
+ * @module model/GetScheduleDataScheduleTournamentSplit
  * @version 1.0.0
  */
-export class GetVodsDataScheduleTournament {
+export class GetScheduleDataScheduleTournamentSplit {
   /**
-   * Constructs a new <code>GetVodsDataScheduleTournament</code>.
-   * @alias module:model/GetVodsDataScheduleTournament
+   * Constructs a new <code>GetScheduleDataScheduleTournamentSplit</code>.
+   * @alias module:model/GetScheduleDataScheduleTournamentSplit
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>GetVodsDataScheduleTournament</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetScheduleDataScheduleTournamentSplit</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetVodsDataScheduleTournament} obj Optional instance to populate.
-   * @return {module:model/GetVodsDataScheduleTournament} The populated <code>GetVodsDataScheduleTournament</code> instance.
+   * @param {module:model/GetScheduleDataScheduleTournamentSplit} obj Optional instance to populate.
+   * @return {module:model/GetScheduleDataScheduleTournamentSplit} The populated <code>GetScheduleDataScheduleTournamentSplit</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GetVodsDataScheduleTournament();
+      obj = obj || new GetScheduleDataScheduleTournamentSplit();
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
     }
@@ -48,5 +48,5 @@ export class GetVodsDataScheduleTournament {
 /**
  * @member {String} name
  */
-GetVodsDataScheduleTournament.prototype.name = undefined;
+GetScheduleDataScheduleTournamentSplit.prototype.name = undefined;
 

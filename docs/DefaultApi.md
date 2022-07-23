@@ -15,20 +15,26 @@ Method | HTTP request | Description
 
 <a name="getEventDetails"></a>
 # **getEventDetails**
-> GetEventDetails getEventDetails(opts)
+> GetEventDetails getEventDetails(hl, id)
 
 Get getEventDetails record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
-let opts = { 
-  'hl': "hl_example", // String | hl
-  'id': 1.2 // Number | id
-};
-apiInstance.getEventDetails(opts, (error, data, response) => {
+let hl = "hl_example"; // String | hl
+let id = 1.2; // Number | id
+
+apiInstance.getEventDetails(hl, id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -41,8 +47,8 @@ apiInstance.getEventDetails(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
- **id** | **Number**| id | [optional] 
+ **hl** | **String**| hl | 
+ **id** | **Number**| id | 
 
 ### Return type
 
@@ -50,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -59,21 +65,28 @@ No authorization required
 
 <a name="getEventList"></a>
 # **getEventList**
-> GetEventList getEventList(opts)
+> GetEventList getEventList(hl, opts)
 
 Get getEventList record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example", // String | sport
   'leagueId': 1.2 // Number | leagueId
 };
-apiInstance.getEventList(opts, (error, data, response) => {
+apiInstance.getEventList(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -86,7 +99,7 @@ apiInstance.getEventList(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
  **leagueId** | **Number**| leagueId | [optional] 
 
@@ -96,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -105,20 +118,27 @@ No authorization required
 
 <a name="getLeagues"></a>
 # **getLeagues**
-> GetLeagues getLeagues(opts)
+> GetLeagues getLeagues(hl, opts)
 
 Get getLeagues record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example" // String | sport
 };
-apiInstance.getLeagues(opts, (error, data, response) => {
+apiInstance.getLeagues(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -131,7 +151,7 @@ apiInstance.getLeagues(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
 
 ### Return type
@@ -140,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -149,20 +169,27 @@ No authorization required
 
 <a name="getLeaguesForStandings"></a>
 # **getLeaguesForStandings**
-> GetLeaguesForStandings getLeaguesForStandings(opts)
+> GetLeaguesForStandings getLeaguesForStandings(hl, opts)
 
 Get getLeaguesForStandings record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example" // String | sport
 };
-apiInstance.getLeaguesForStandings(opts, (error, data, response) => {
+apiInstance.getLeaguesForStandings(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -175,7 +202,7 @@ apiInstance.getLeaguesForStandings(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
 
 ### Return type
@@ -184,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -193,20 +220,27 @@ No authorization required
 
 <a name="getLiveDetails"></a>
 # **getLiveDetails**
-> GetLiveDetails getLiveDetails(opts)
+> GetLiveDetails getLiveDetails(hl, opts)
 
 Get getLiveDetails record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example" // String | sport
 };
-apiInstance.getLiveDetails(opts, (error, data, response) => {
+apiInstance.getLiveDetails(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -219,7 +253,7 @@ apiInstance.getLiveDetails(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
 
 ### Return type
@@ -228,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -237,21 +271,28 @@ No authorization required
 
 <a name="getSchedule"></a>
 # **getSchedule**
-> GetSchedule getSchedule(opts)
+> GetSchedule getSchedule(hl, opts)
 
 Get getSchedule record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example", // String | sport
-  'eventState': "eventState_example" // String | eventState
+  'leagueId': 1.2 // Number | leagueId
 };
-apiInstance.getSchedule(opts, (error, data, response) => {
+apiInstance.getSchedule(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -264,9 +305,9 @@ apiInstance.getSchedule(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
- **eventState** | **String**| eventState | [optional] 
+ **leagueId** | **Number**| leagueId | [optional] 
 
 ### Return type
 
@@ -274,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -283,21 +324,28 @@ No authorization required
 
 <a name="getStandings"></a>
 # **getStandings**
-> GetStandings getStandings(opts)
+> GetStandings getStandings(hl, opts)
 
 Get getStandings record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example", // String | sport
   'tournamentId': 1.2 // Number | tournamentId
 };
-apiInstance.getStandings(opts, (error, data, response) => {
+apiInstance.getStandings(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -310,7 +358,7 @@ apiInstance.getStandings(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
  **tournamentId** | **Number**| tournamentId | [optional] 
 
@@ -320,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 
@@ -329,21 +377,28 @@ No authorization required
 
 <a name="getVods"></a>
 # **getVods**
-> GetVods getVods(opts)
+> GetVods getVods(hl, opts)
 
 Get getVods record
 
 ### Example
 ```javascript
 import {ValorantEsportsOpenApiSpecification} from 'valorant_esports_open_api_specification';
+let defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
+
+// Configure API key authorization: apiKeyAuth
+let apiKeyAuth = defaultClient.authentications['apiKeyAuth'];
+apiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new ValorantEsportsOpenApiSpecification.DefaultApi();
+let hl = "hl_example"; // String | hl
 let opts = { 
-  'hl': "hl_example", // String | hl
   'sport': "sport_example", // String | sport
   'tournamentId': 1.2 // Number | tournamentId
 };
-apiInstance.getVods(opts, (error, data, response) => {
+apiInstance.getVods(hl, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -356,7 +411,7 @@ apiInstance.getVods(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hl** | **String**| hl | [optional] 
+ **hl** | **String**| hl | 
  **sport** | **String**| sport | [optional] 
  **tournamentId** | **Number**| tournamentId | [optional] 
 
@@ -366,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKeyAuth](../README.md#apiKeyAuth)
 
 ### HTTP request headers
 

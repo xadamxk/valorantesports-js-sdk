@@ -39,21 +39,21 @@ export class GetScheduleDataSchedulePages {
     if (data) {
       obj = obj || new GetScheduleDataSchedulePages();
       if (data.hasOwnProperty('older'))
-        obj.older = ApiClient.convertToType(data['older'], Object);
+        obj.older = ApiClient.convertToType(data['older'], 'String');
       if (data.hasOwnProperty('newer'))
-        obj.newer = ApiClient.convertToType(data['newer'], Object);
+        obj.newer = ApiClient.convertToType(data['newer'], 'String');
     }
     return obj;
   }
 }
 
 /**
- * @member {Object} older
+ * @member {String} older
  */
 GetScheduleDataSchedulePages.prototype.older = undefined;
 
 /**
- * @member {Object} newer
+ * @member {String} newer
  */
 GetScheduleDataSchedulePages.prototype.newer = undefined;
 

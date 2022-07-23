@@ -48,14 +48,22 @@ import {GetLiveDetailsData} from './model/GetLiveDetailsData';
 import {GetSchedule} from './model/GetSchedule';
 import {GetScheduleData} from './model/GetScheduleData';
 import {GetScheduleDataSchedule} from './model/GetScheduleDataSchedule';
+import {GetScheduleDataScheduleEvents} from './model/GetScheduleDataScheduleEvents';
+import {GetScheduleDataScheduleLeague} from './model/GetScheduleDataScheduleLeague';
+import {GetScheduleDataScheduleMatch} from './model/GetScheduleDataScheduleMatch';
+import {GetScheduleDataScheduleMatchRecord} from './model/GetScheduleDataScheduleMatchRecord';
+import {GetScheduleDataScheduleMatchResult} from './model/GetScheduleDataScheduleMatchResult';
+import {GetScheduleDataScheduleMatchStrategy} from './model/GetScheduleDataScheduleMatchStrategy';
+import {GetScheduleDataScheduleMatchTeams} from './model/GetScheduleDataScheduleMatchTeams';
 import {GetScheduleDataSchedulePages} from './model/GetScheduleDataSchedulePages';
+import {GetScheduleDataScheduleTournament} from './model/GetScheduleDataScheduleTournament';
+import {GetScheduleDataScheduleTournamentSplit} from './model/GetScheduleDataScheduleTournamentSplit';
 import {GetStandings} from './model/GetStandings';
 import {GetStandingsData} from './model/GetStandingsData';
 import {GetStandingsDataCells} from './model/GetStandingsDataCells';
 import {GetStandingsDataColumns} from './model/GetStandingsDataColumns';
 import {GetStandingsDataMatches} from './model/GetStandingsDataMatches';
 import {GetStandingsDataOrigin} from './model/GetStandingsDataOrigin';
-import {GetStandingsDataResult} from './model/GetStandingsDataResult';
 import {GetStandingsDataSeason} from './model/GetStandingsDataSeason';
 import {GetStandingsDataSeasonSplits} from './model/GetStandingsDataSeasonSplits';
 import {GetStandingsDataSections} from './model/GetStandingsDataSections';
@@ -69,10 +77,10 @@ import {GetVodsDataScheduleEvents} from './model/GetVodsDataScheduleEvents';
 import {GetVodsDataScheduleGames} from './model/GetVodsDataScheduleGames';
 import {GetVodsDataScheduleLeague} from './model/GetVodsDataScheduleLeague';
 import {GetVodsDataScheduleMatch} from './model/GetVodsDataScheduleMatch';
-import {GetVodsDataScheduleMatchStrategy} from './model/GetVodsDataScheduleMatchStrategy';
 import {GetVodsDataScheduleMatchTeams} from './model/GetVodsDataScheduleMatchTeams';
-import {GetVodsDataScheduleTournament} from './model/GetVodsDataScheduleTournament';
 import {GetVodsDataScheduleVods} from './model/GetVodsDataScheduleVods';
+import {Locale} from './model/Locale';
+import {State} from './model/State';
 import {DefaultApi} from './api/DefaultApi';
 
 /**
@@ -324,10 +332,64 @@ export {
     GetScheduleDataSchedule,
 
     /**
+     * The GetScheduleDataScheduleEvents model constructor.
+     * @property {module:model/GetScheduleDataScheduleEvents}
+     */
+    GetScheduleDataScheduleEvents,
+
+    /**
+     * The GetScheduleDataScheduleLeague model constructor.
+     * @property {module:model/GetScheduleDataScheduleLeague}
+     */
+    GetScheduleDataScheduleLeague,
+
+    /**
+     * The GetScheduleDataScheduleMatch model constructor.
+     * @property {module:model/GetScheduleDataScheduleMatch}
+     */
+    GetScheduleDataScheduleMatch,
+
+    /**
+     * The GetScheduleDataScheduleMatchRecord model constructor.
+     * @property {module:model/GetScheduleDataScheduleMatchRecord}
+     */
+    GetScheduleDataScheduleMatchRecord,
+
+    /**
+     * The GetScheduleDataScheduleMatchResult model constructor.
+     * @property {module:model/GetScheduleDataScheduleMatchResult}
+     */
+    GetScheduleDataScheduleMatchResult,
+
+    /**
+     * The GetScheduleDataScheduleMatchStrategy model constructor.
+     * @property {module:model/GetScheduleDataScheduleMatchStrategy}
+     */
+    GetScheduleDataScheduleMatchStrategy,
+
+    /**
+     * The GetScheduleDataScheduleMatchTeams model constructor.
+     * @property {module:model/GetScheduleDataScheduleMatchTeams}
+     */
+    GetScheduleDataScheduleMatchTeams,
+
+    /**
      * The GetScheduleDataSchedulePages model constructor.
      * @property {module:model/GetScheduleDataSchedulePages}
      */
     GetScheduleDataSchedulePages,
+
+    /**
+     * The GetScheduleDataScheduleTournament model constructor.
+     * @property {module:model/GetScheduleDataScheduleTournament}
+     */
+    GetScheduleDataScheduleTournament,
+
+    /**
+     * The GetScheduleDataScheduleTournamentSplit model constructor.
+     * @property {module:model/GetScheduleDataScheduleTournamentSplit}
+     */
+    GetScheduleDataScheduleTournamentSplit,
 
     /**
      * The GetStandings model constructor.
@@ -364,12 +426,6 @@ export {
      * @property {module:model/GetStandingsDataOrigin}
      */
     GetStandingsDataOrigin,
-
-    /**
-     * The GetStandingsDataResult model constructor.
-     * @property {module:model/GetStandingsDataResult}
-     */
-    GetStandingsDataResult,
 
     /**
      * The GetStandingsDataSeason model constructor.
@@ -450,28 +506,28 @@ export {
     GetVodsDataScheduleMatch,
 
     /**
-     * The GetVodsDataScheduleMatchStrategy model constructor.
-     * @property {module:model/GetVodsDataScheduleMatchStrategy}
-     */
-    GetVodsDataScheduleMatchStrategy,
-
-    /**
      * The GetVodsDataScheduleMatchTeams model constructor.
      * @property {module:model/GetVodsDataScheduleMatchTeams}
      */
     GetVodsDataScheduleMatchTeams,
 
     /**
-     * The GetVodsDataScheduleTournament model constructor.
-     * @property {module:model/GetVodsDataScheduleTournament}
-     */
-    GetVodsDataScheduleTournament,
-
-    /**
      * The GetVodsDataScheduleVods model constructor.
      * @property {module:model/GetVodsDataScheduleVods}
      */
     GetVodsDataScheduleVods,
+
+    /**
+     * The Locale model constructor.
+     * @property {module:model/Locale}
+     */
+    Locale,
+
+    /**
+     * The State model constructor.
+     * @property {module:model/State}
+     */
+    State,
 
     /**
     * The DefaultApi service constructor.

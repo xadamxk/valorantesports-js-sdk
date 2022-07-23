@@ -15,29 +15,29 @@
 import {ApiClient} from '../ApiClient';
 
 /**
- * The GetVodsDataScheduleMatchStrategy model module.
- * @module model/GetVodsDataScheduleMatchStrategy
+ * The GetScheduleDataScheduleMatchStrategy model module.
+ * @module model/GetScheduleDataScheduleMatchStrategy
  * @version 1.0.0
  */
-export class GetVodsDataScheduleMatchStrategy {
+export class GetScheduleDataScheduleMatchStrategy {
   /**
-   * Constructs a new <code>GetVodsDataScheduleMatchStrategy</code>.
-   * @alias module:model/GetVodsDataScheduleMatchStrategy
+   * Constructs a new <code>GetScheduleDataScheduleMatchStrategy</code>.
+   * @alias module:model/GetScheduleDataScheduleMatchStrategy
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>GetVodsDataScheduleMatchStrategy</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetScheduleDataScheduleMatchStrategy</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetVodsDataScheduleMatchStrategy} obj Optional instance to populate.
-   * @return {module:model/GetVodsDataScheduleMatchStrategy} The populated <code>GetVodsDataScheduleMatchStrategy</code> instance.
+   * @param {module:model/GetScheduleDataScheduleMatchStrategy} obj Optional instance to populate.
+   * @return {module:model/GetScheduleDataScheduleMatchStrategy} The populated <code>GetScheduleDataScheduleMatchStrategy</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GetVodsDataScheduleMatchStrategy();
+      obj = obj || new GetScheduleDataScheduleMatchStrategy();
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('count'))
@@ -50,10 +50,10 @@ export class GetVodsDataScheduleMatchStrategy {
 /**
  * @member {String} type
  */
-GetVodsDataScheduleMatchStrategy.prototype.type = undefined;
+GetScheduleDataScheduleMatchStrategy.prototype.type = undefined;
 
 /**
  * @member {Number} count
  */
-GetVodsDataScheduleMatchStrategy.prototype.count = undefined;
+GetScheduleDataScheduleMatchStrategy.prototype.count = undefined;
 

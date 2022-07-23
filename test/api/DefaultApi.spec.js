@@ -38,9 +38,8 @@
         it('should call getEventDetails successfully', function(done) {
           // TODO: uncomment, update parameter values for getEventDetails call and complete the assertions
           /*
-          var opts = {};
 
-          instance.getEventDetails(opts, function(error, data, response) {
+          instance.getEventDetails(hl, id, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -61,7 +60,7 @@
           /*
           var opts = {};
 
-          instance.getEventList(opts, function(error, data, response) {
+          instance.getEventList(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -82,7 +81,7 @@
           /*
           var opts = {};
 
-          instance.getLeagues(opts, function(error, data, response) {
+          instance.getLeagues(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -103,7 +102,7 @@
           /*
           var opts = {};
 
-          instance.getLeaguesForStandings(opts, function(error, data, response) {
+          instance.getLeaguesForStandings(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -124,7 +123,7 @@
           /*
           var opts = {};
 
-          instance.getLiveDetails(opts, function(error, data, response) {
+          instance.getLiveDetails(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -145,7 +144,7 @@
           /*
           var opts = {};
 
-          instance.getSchedule(opts, function(error, data, response) {
+          instance.getSchedule(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -166,7 +165,7 @@
           /*
           var opts = {};
 
-          instance.getStandings(opts, function(error, data, response) {
+          instance.getStandings(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -187,7 +186,7 @@
           /*
           var opts = {};
 
-          instance.getVods(opts, function(error, data, response) {
+          instance.getVods(hl, opts, function(error, data, response) {
             if (error) {
               done(error);
               return;

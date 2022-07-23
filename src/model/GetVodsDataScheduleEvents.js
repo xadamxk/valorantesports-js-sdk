@@ -13,10 +13,10 @@
  *
  */
 import {ApiClient} from '../ApiClient';
+import {GetScheduleDataScheduleTournamentSplit} from './GetScheduleDataScheduleTournamentSplit';
 import {GetVodsDataScheduleGames} from './GetVodsDataScheduleGames';
 import {GetVodsDataScheduleLeague} from './GetVodsDataScheduleLeague';
 import {GetVodsDataScheduleMatch} from './GetVodsDataScheduleMatch';
-import {GetVodsDataScheduleTournament} from './GetVodsDataScheduleTournament';
 
 /**
  * The GetVodsDataScheduleEvents model module.
@@ -49,7 +49,7 @@ export class GetVodsDataScheduleEvents {
       if (data.hasOwnProperty('league'))
         obj.league = GetVodsDataScheduleLeague.constructFromObject(data['league']);
       if (data.hasOwnProperty('tournament'))
-        obj.tournament = GetVodsDataScheduleTournament.constructFromObject(data['tournament']);
+        obj.tournament = GetScheduleDataScheduleTournamentSplit.constructFromObject(data['tournament']);
       if (data.hasOwnProperty('match'))
         obj.match = GetVodsDataScheduleMatch.constructFromObject(data['match']);
       if (data.hasOwnProperty('games'))
@@ -75,7 +75,7 @@ GetVodsDataScheduleEvents.prototype.blockName = undefined;
 GetVodsDataScheduleEvents.prototype.league = undefined;
 
 /**
- * @member {module:model/GetVodsDataScheduleTournament} tournament
+ * @member {module:model/GetScheduleDataScheduleTournamentSplit} tournament
  */
 GetVodsDataScheduleEvents.prototype.tournament = undefined;
 

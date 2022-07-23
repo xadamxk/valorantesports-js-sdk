@@ -13,37 +13,33 @@
  *
  */
 import {ApiClient} from '../ApiClient';
+import {GetScheduleDataScheduleMatchRecord} from './GetScheduleDataScheduleMatchRecord';
 import {GetScheduleDataScheduleMatchResult} from './GetScheduleDataScheduleMatchResult';
-import {GetStandingsDataOrigin} from './GetStandingsDataOrigin';
 
 /**
- * The GetStandingsDataTeams model module.
- * @module model/GetStandingsDataTeams
+ * The GetScheduleDataScheduleMatchTeams model module.
+ * @module model/GetScheduleDataScheduleMatchTeams
  * @version 1.0.0
  */
-export class GetStandingsDataTeams {
+export class GetScheduleDataScheduleMatchTeams {
   /**
-   * Constructs a new <code>GetStandingsDataTeams</code>.
-   * @alias module:model/GetStandingsDataTeams
+   * Constructs a new <code>GetScheduleDataScheduleMatchTeams</code>.
+   * @alias module:model/GetScheduleDataScheduleMatchTeams
    * @class
    */
   constructor() {
   }
 
   /**
-   * Constructs a <code>GetStandingsDataTeams</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetScheduleDataScheduleMatchTeams</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetStandingsDataTeams} obj Optional instance to populate.
-   * @return {module:model/GetStandingsDataTeams} The populated <code>GetStandingsDataTeams</code> instance.
+   * @param {module:model/GetScheduleDataScheduleMatchTeams} obj Optional instance to populate.
+   * @return {module:model/GetScheduleDataScheduleMatchTeams} The populated <code>GetScheduleDataScheduleMatchTeams</code> instance.
    */
   static constructFromObject(data, obj) {
     if (data) {
-      obj = obj || new GetStandingsDataTeams();
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'String');
-      if (data.hasOwnProperty('slug'))
-        obj.slug = ApiClient.convertToType(data['slug'], 'String');
+      obj = obj || new GetScheduleDataScheduleMatchTeams();
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('code'))
@@ -52,45 +48,35 @@ export class GetStandingsDataTeams {
         obj.image = ApiClient.convertToType(data['image'], 'String');
       if (data.hasOwnProperty('result'))
         obj.result = GetScheduleDataScheduleMatchResult.constructFromObject(data['result']);
-      if (data.hasOwnProperty('origin'))
-        obj.origin = GetStandingsDataOrigin.constructFromObject(data['origin']);
+      if (data.hasOwnProperty('record'))
+        obj.record = GetScheduleDataScheduleMatchRecord.constructFromObject(data['record']);
     }
     return obj;
   }
 }
 
 /**
- * @member {String} id
- */
-GetStandingsDataTeams.prototype.id = undefined;
-
-/**
- * @member {String} slug
- */
-GetStandingsDataTeams.prototype.slug = undefined;
-
-/**
  * @member {String} name
  */
-GetStandingsDataTeams.prototype.name = undefined;
+GetScheduleDataScheduleMatchTeams.prototype.name = undefined;
 
 /**
  * @member {String} code
  */
-GetStandingsDataTeams.prototype.code = undefined;
+GetScheduleDataScheduleMatchTeams.prototype.code = undefined;
 
 /**
  * @member {String} image
  */
-GetStandingsDataTeams.prototype.image = undefined;
+GetScheduleDataScheduleMatchTeams.prototype.image = undefined;
 
 /**
  * @member {module:model/GetScheduleDataScheduleMatchResult} result
  */
-GetStandingsDataTeams.prototype.result = undefined;
+GetScheduleDataScheduleMatchTeams.prototype.result = undefined;
 
 /**
- * @member {module:model/GetStandingsDataOrigin} origin
+ * @member {module:model/GetScheduleDataScheduleMatchRecord} record
  */
-GetStandingsDataTeams.prototype.origin = undefined;
+GetScheduleDataScheduleMatchTeams.prototype.record = undefined;
 

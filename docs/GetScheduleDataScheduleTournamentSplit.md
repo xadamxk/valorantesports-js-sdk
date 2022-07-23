@@ -1,4 +1,4 @@
-# ValorantEsportsOpenApiSpecification.GetVodsDataScheduleTournament
+# ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleTournamentSplit
 
 ## Properties
 Name | Type | Description | Notes

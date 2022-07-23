@@ -1,4 +1,4 @@
-# ValorantEsportsOpenApiSpecification.GetVodsDataScheduleMatchStrategy
+# ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleMatchStrategy
 
 ## Properties
 Name | Type | Description | Notes

@@ -29,20 +29,38 @@
   var instance;
 
   describe('(package)', function() {
-    describe('GetVodsDataScheduleTournament', function() {
+    describe('GetScheduleDataScheduleLeague', function() {
       beforeEach(function() {
-        instance = new ValorantEsportsOpenApiSpecification.GetVodsDataScheduleTournament();
+        instance = new ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleLeague();
       });
 
-      it('should create an instance of GetVodsDataScheduleTournament', function() {
-        // TODO: update the code to test GetVodsDataScheduleTournament
-        expect(instance).to.be.a(ValorantEsportsOpenApiSpecification.GetVodsDataScheduleTournament);
+      it('should create an instance of GetScheduleDataScheduleLeague', function() {
+        // TODO: update the code to test GetScheduleDataScheduleLeague
+        expect(instance).to.be.a(ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleLeague);
       });
 
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property slug (base name: "slug")', function() {
+        // TODO: update the code to test the property slug
+        expect(instance).to.have.property('slug');
+        // expect(instance.slug).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property image (base name: "image")', function() {
+        // TODO: update the code to test the property image
+        expect(instance).to.have.property('image');
+        // expect(instance.image).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property region (base name: "region")', function() {
+        // TODO: update the code to test the property region
+        expect(instance).to.have.property('region');
+        // expect(instance.region).to.be(expectedValueLiteral);
       });
 
     });

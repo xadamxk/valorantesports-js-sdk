@@ -1,4 +1,4 @@
-# ValorantEsportsOpenApiSpecification.GetStandingsDataResult
+# ValorantEsportsOpenApiSpecification.GetScheduleDataScheduleMatchResult
 
 ## Properties
 Name | Type | Description | Notes
