@@ -1,4 +1,4 @@
-# valorant_esports_open_api_specification
+# valorantesports-js-sdk
 
 JavaScript client for Valorant Esports API
 Unofficial documentation to the ValorantEsports Api
@@ -20,7 +20,7 @@ please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.co
 Then install it via:
 
 ```shell
-npm install valorant_esports_open_api_specification --save
+npm install valorantesports-js-sdk --save
 ```
 
 #### git
@@ -70,12 +70,12 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var ValorantEsportsOpenApiSpecification = require("valorant_esports_open_api_specification");
+var ValorantEsportsOpenApiSpecification = require("valorantesports-js-sdk");
 var defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
 
 // Configure API key authorization: apiKeyAuth
 var apiKeyAuth = defaultClient.authentications["apiKeyAuth"];
-apiKeyAuth.apiKey = "YOUR API KEY";
+apiKeyAuth.apiKey = "108353700612933430";
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKeyAuth.apiKeyPrefix['x-api-key'] = "Token"
 
