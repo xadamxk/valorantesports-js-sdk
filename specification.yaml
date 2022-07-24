@@ -14,7 +14,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: id
@@ -22,7 +21,6 @@ paths:
           in: query
           required: true
           style: form
-          explode: true
           schema:
             type: number
       responses:
@@ -42,7 +40,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -50,7 +47,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
         - name: leagueId
@@ -58,7 +54,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: number
       responses:
@@ -78,7 +73,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -86,7 +80,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
       responses:
@@ -106,7 +99,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -114,7 +106,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
       responses:
@@ -134,7 +125,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -142,7 +132,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
       responses:
@@ -162,7 +151,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -170,7 +158,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
         - name: leagueId
@@ -178,7 +165,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: number
       responses:
@@ -198,7 +184,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -206,7 +191,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
         - name: tournamentId
@@ -214,7 +198,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: number
       responses:
@@ -234,7 +217,6 @@ paths:
           description: hl
           in: query
           style: form
-          explode: true
           schema:
             type: string
         - name: sport
@@ -242,7 +224,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: string
         - name: tournamentId
@@ -250,7 +231,6 @@ paths:
           in: query
           required: false
           style: form
-          explode: true
           schema:
             type: number
       responses:

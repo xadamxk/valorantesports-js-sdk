@@ -127,7 +127,6 @@ export class ApiClient {
 
             return encodeURIComponent(value);
         });
-
         return url;
     }
 

@@ -1,4 +1,4 @@
-# valorantesports-js-sdk
+# valorant_esports_open_api_specification
 
 JavaScript client for Valorant Esports API
 Unofficial documentation to the ValorantEsports Api
@@ -20,7 +20,7 @@ please follow the procedure in ["Publishing npm packages"](https://docs.npmjs.co
 Then install it via:
 
 ```shell
-npm install valorantesports-js-sdk --save
+npm install valorant_esports_open_api_specification --save
 ```
 
 #### git
@@ -70,7 +70,7 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var ValorantEsportsOpenApiSpecification = require("valorantesports-js-sdk");
+var ValorantEsportsOpenApiSpecification = require("valorant_esports_open_api_specification");
 var defaultClient = ValorantEsportsOpenApiSpecification.ApiClient.instance;
 
 // Configure API key authorization: apiKeyAuth
@@ -176,6 +176,8 @@ All URIs are relative to *https://esports-api.service.valorantesports.com/persis
 - [ValorantEsportsOpenApiSpecification.GetVodsDataScheduleMatch](docs/GetVodsDataScheduleMatch.md)
 - [ValorantEsportsOpenApiSpecification.GetVodsDataScheduleMatchTeams](docs/GetVodsDataScheduleMatchTeams.md)
 - [ValorantEsportsOpenApiSpecification.GetVodsDataScheduleVods](docs/GetVodsDataScheduleVods.md)
+- [ValorantEsportsOpenApiSpecification.Locale](docs/Locale.md)
+- [ValorantEsportsOpenApiSpecification.State](docs/State.md)
 
 ## Documentation for Authorization
 
